@@ -69,4 +69,4 @@ The lab is also intended to develop:
 - Incident communication
 - Root-cause analysis
 - Automation mindset
-- Operational discipline
+- Operational discipline.
