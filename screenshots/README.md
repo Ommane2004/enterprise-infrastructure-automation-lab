@@ -23,6 +23,23 @@
 | `14-zabbix-dashboard.png`          | Infrastructure monitoring dashboard providing a centralized NOC-style operational view of the lab.                    |
 
 ---
+### Architecture
+
+### `01-physical-virtual-architecture.png`
+
+> **Physical / Virtual Architecture** — Overview of the VMware-hosted lab and the virtual machines providing firewalling, routing, monitoring, servers, clients, virtualization, and security-testing capabilities.
+
+### `02-network-architecture.png`
+
+> **Network Architecture** — Logical network topology showing the WAN, transit, internal client, server, and isolated security networks and the routing relationships between them.
+
+### `03-automation-architecture.png`
+
+> **Automation Architecture** — Ansible-based management architecture showing Zabbix01 as the automation controller and the Linux, Windows, Active Directory, and VyOS systems managed from the centralized automation environment.
+
+### `04-noc-soc-operational-workflow.png`
+
+> **NOC/SOC Operational Workflow** — Operational lifecycle connecting monitoring, detection, investigation, validation, remediation, verification, and documentation.
 
 ```markdown
 # Enterprise Infrastructure Automation, Monitoring & Security Lab
