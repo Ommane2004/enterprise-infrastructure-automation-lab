@@ -1,19 +1,42 @@
 # Architecture
 
-This directory documents the architecture of the enterprise infrastructure
-lab.
+This directory documents the architecture of the Enterprise
+Infrastructure & Automation Lab.
 
-## Contents
+The architecture is designed to integrate:
 
-- Enterprise architecture
-- Network architecture
-- Automation architecture
-- Monitoring architecture
-- Security architecture
-- Architecture diagrams
+- Network engineering
+- Linux and Windows administration
+- Virtualization
+- Infrastructure automation
+- Monitoring and observability
+- Network security
+- Cybersecurity operations
+- Troubleshooting and incident response
 
-## Design Philosophy
+## Architecture Philosophy
 
-The lab is designed to simulate a small enterprise environment using
-segmentation, centralized monitoring, automation, controlled administrative
-access, and documented operational procedures.
+The lab follows an engineering lifecycle:
+
+```text
+Design
+  ↓
+Build
+  ↓
+Configure
+  ↓
+Validate
+  ↓
+Monitor
+  ↓
+Automate
+  ↓
+Test Failure
+  ↓
+Troubleshoot
+  ↓
+Recover
+  ↓
+Document
+  ↓
+Improve
