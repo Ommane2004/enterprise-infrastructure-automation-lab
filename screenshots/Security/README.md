@@ -33,3 +33,9 @@ Nmap service detection was used to enumerate common web-service ports on the iso
 ![HTTP Service Validation](screenshots/security/25-http-service-validation.png)
 
 HTTP response headers are retrieved from the isolated Metasploitable2 web service to validate application-layer connectivity and confirm the detected HTTP server.
+
+### Web Application Discovery
+
+![Web Application Discovery](screenshots/security/26-web-application-discovery.png)
+
+The exposed HTTP service was validated through a browser to identify the web application surface available for controlled security testing.
