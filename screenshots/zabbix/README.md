@@ -21,3 +21,9 @@ Zabbix monitors the VyOS router through SNMP and collects device and interface t
 ![Proxmox Monitoring](screenshots/zabbix/12-zabbix-proxmox-monitoring.png)
 
 The Proxmox virtualization environment is integrated into Zabbix to provide centralized infrastructure monitoring and operational visibility.
+
+## Zabbix Problems
+
+![Zabbix Problems](screenshots/zabbix/13-zabbix-problems.png)
+
+The Problems view provides a centralized operational view of detected monitoring conditions and supports the investigation and validation workflow used in the lab.
