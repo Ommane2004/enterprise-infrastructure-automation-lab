@@ -1,0 +1,22 @@
+Validation: VyOS Health Check
+Platform: VyOS
+Purpose: Verify that critical VyOS interfaces are present and configured.
+
+Execution Result:
+PASS: Critical VyOS interfaces are present and configured.
+
+Ansible Execution Summary:
+ok=2
+changed=0
+unreachable=0
+failed=0
+
+Validation Result:
+PASS
+
+Interpretation:
+The automated health check confirmed that the required critical
+VyOS interfaces were present and configured as expected.
+
+Evidence Type:
+Infrastructure validation
