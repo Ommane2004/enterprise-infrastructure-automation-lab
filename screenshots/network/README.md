@@ -9,3 +9,9 @@ The VyOS router uses dedicated interfaces for the pfSense transit network, inter
 ![VyOS Routing Table](screenshots/network/16-vyos-routing-table.png)
 
 The VyOS routing table demonstrates the default path toward the pfSense gateway and the directly connected internal, server, and transit networks.
+
+## pfSense Routing
+
+![pfSense Routing](screenshots/network/17-pfsense-routing.png)
+
+The pfSense firewall provides the upstream routing boundary for the lab. Static routes direct traffic for the internal client and server networks to the VyOS router across the transit network.
