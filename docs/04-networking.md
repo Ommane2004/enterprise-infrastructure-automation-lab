@@ -44,3 +44,12 @@ The network is built primarily with VMware virtual networks, pfSense, and VyOS.
         |                 |     |      |        |
    Windows 10           Kali   DC01 Zabbix01 RHEL01
    10.10.10.10      10.10.10.11
+
+The security-testing environment uses a separate isolated VMware network:
+                 VMnet19
+             172.16.50.0/24
+                    |
+             +------+------+
+             |             |
+          Kali          Metasploitable2
+      172.16.50.20       172.16.50.10
