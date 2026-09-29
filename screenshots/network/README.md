@@ -27,3 +27,9 @@ pfSense is configured as an SNMP-monitored network device. The SNMP daemon opera
 ![End-to-End Network Connectivity](screenshots/network/19-end-to-end-connectivity.png)
 
 Connectivity testing validates the complete network path from the server network through VyOS and pfSense to the Internet. The test also verifies DNS resolution.
+
+## Kali Security Network
+
+![Kali Security Network](screenshots/security/20-kali-security-network.png)
+
+Kali Linux is connected to a dedicated security-testing network in addition to the internal client network. The isolated security segment is used for controlled security exercises against lab targets.
