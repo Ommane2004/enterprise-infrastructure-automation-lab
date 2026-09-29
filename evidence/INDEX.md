@@ -37,7 +37,55 @@ The detailed validation evidence is maintained in:
 These artifacts represent actual laboratory validation results,
 not placeholder examples.
 
-# 3. Network Evidence
+# 3. Monitoring Evidence
+
+Monitoring evidence demonstrates operational visibility into the
+implemented infrastructure through Zabbix.
+
+The current evidence set covers host inventory, SNMP monitoring,
+Proxmox monitoring, problem detection, and NOC visibility.
+
+| Artifact | Evidence |
+|---|---|
+| [`09-zabbix-host-inventory.png`](monitoring/09-zabbix-host-inventory.png) | Zabbix monitored-host inventory and availability |
+| [`10-zabbix-pfsense-snmp.png`](monitoring/10-zabbix-pfsense-snmp.png) | pfSense SNMP monitoring |
+| [`11-zabbix-vyos-snmp.png`](monitoring/11-zabbix-vyos-snmp.png) | VyOS SNMP monitoring |
+| [`12-zabbix-proxmox-monitoring.png`](monitoring/12-zabbix-proxmox-monitoring.png) | Proxmox infrastructure monitoring |
+| [`13-zabbix-problems.png`](monitoring/13-zabbix-problems.png) | Zabbix problem detection and operational state |
+| [`14-zabbix-noc-dashboard.png`](monitoring/14-zabbix-noc-dashboard.png) | NOC-oriented infrastructure visibility |
+
+Detailed monitoring evidence is maintained in:
+
+[`monitoring/`](monitoring/)
+
+---
+
+## Monitoring Relationship
+
+```text
+Infrastructure
+      │
+      ├── Linux
+      ├── Windows / AD
+      ├── VyOS
+      ├── pfSense
+      └── Proxmox
+              │
+              ▼
+        Zabbix Monitoring
+              │
+       ┌──────┴──────┐
+       ▼             ▼
+     Agent          SNMP
+       │             │
+       └──────┬──────┘
+              ▼
+       Metrics / Problems
+              │
+              ▼
+       NOC Visibility
+```
+# 4. Network Evidence
 
 Network validation evidence demonstrates that the implemented
 network architecture is configured and operating as expected.
