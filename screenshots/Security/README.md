@@ -15,3 +15,9 @@ The isolated security network provides connectivity between Kali Linux and Metas
 ![Metasploitable2 Service Enumeration](screenshots/security/22-metasploitable-service-enumeration.png)
 
 Nmap service discovery is used to identify exposed TCP services and their reported versions on the intentionally vulnerable Metasploitable2 target. Testing is restricted to the isolated security-lab network.
+
+## Metasploitable2 Vulnerability Assessment
+
+![Metasploitable2 Vulnerability Assessment](screenshots/security/23-metasploitable-vulnerability-assessment.png)
+
+Nmap vulnerability scripts were used to assess the intentionally vulnerable Metasploitable2 target. The assessment identified the exposed FTP service and associated vulnerability findings within the isolated security-testing network.
