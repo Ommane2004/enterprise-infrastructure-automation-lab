@@ -39,3 +39,11 @@ The design separates:
         10.10.10.0/24           10.10.20.0/24
         Internal Client         Server / Management
              Network                 Network
+
+A separate isolated security-testing network exists:
+                    SECURITY TESTING
+                     172.16.50.0/24
+                            |
+                    +-------+-------+
+                    |               |
+                   Kali       Metasploitable2
