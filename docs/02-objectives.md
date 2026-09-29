@@ -1,72 +1,110 @@
-# 02 — Objectives
+# Lab Objectives
 
-## Primary Objective
+## Project Objective
 
-Build and operate a production-inspired enterprise infrastructure
-environment that develops practical engineering capability through
-implementation, automation, monitoring, troubleshooting, and security.
+The objective of this lab is to build and operate an enterprise-style virtual infrastructure environment that connects networking, system administration, monitoring, automation, virtualization, and cybersecurity into a single practical platform.
 
-## Technical Objectives
+The lab is intended to provide hands-on experience with designing infrastructure, configuring systems, validating connectivity, monitoring services, automating repetitive operations, troubleshooting failures, and documenting technical outcomes.
 
-### Networking
+---
 
-- Design an enterprise-style IP addressing scheme
-- Implement network segmentation
-- Configure routing
-- Configure DNS and DHCP
-- Test connectivity and failure scenarios
-- Analyze network traffic
+## Networking Objectives
 
-### System Administration
+- Build a segmented virtual network using VMware.
+- Configure firewall and gateway services using pfSense.
+- Configure enterprise-style routing using VyOS.
+- Practice IPv4 addressing and subnetting.
+- Configure static routes and default routes.
+- Separate client, server, transit, and security networks.
+- Validate end-to-end connectivity.
+- Monitor network devices using SNMP.
 
-- Deploy Linux servers
-- Deploy Windows systems
-- Manage users and groups
-- Configure services
-- Manage system resources
-- Implement secure remote administration
+---
 
-### Monitoring
+## System Administration Objectives
 
-- Deploy Zabbix
-- Monitor infrastructure availability
-- Monitor system resources
-- Monitor network services
-- Generate and investigate alerts
+- Deploy and manage Linux systems.
+- Deploy and manage Windows systems.
+- Configure Windows Server services.
+- Build an Active Directory domain environment.
+- Configure DNS and domain services.
+- Practice remote administration using SSH and WinRM.
+- Perform system auditing and health validation.
+- Maintain infrastructure configuration and operational state.
 
-### Automation
+---
 
-- Automate infrastructure configuration using Ansible
-- Develop Python utilities for operational tasks
-- Reduce repetitive administrative work
-- Validate automated changes
+## Automation Objectives
 
-### Security
+- Establish a centralized Ansible automation environment.
+- Organize infrastructure using structured inventories.
+- Automate Linux administration tasks.
+- Automate Windows administration tasks.
+- Automate Active Directory operations.
+- Automate network-device auditing.
+- Automate network health validation.
+- Automate configuration backup procedures.
+- Build repeatable and documented operational workflows.
 
-- Apply least privilege
-- Secure administrative access
-- Monitor authentication activity
-- Implement basic network security controls
-- Investigate suspicious activity
+---
 
-### Troubleshooting
+## Monitoring Objectives
 
-- Simulate infrastructure failures
-- Collect evidence
-- Form hypotheses
-- Test hypotheses
-- Identify root causes
-- Apply remediation
-- Validate recovery
+- Deploy Zabbix as the central monitoring platform.
+- Monitor Linux and Windows systems.
+- Monitor pfSense and VyOS network infrastructure.
+- Monitor Proxmox virtualization infrastructure.
+- Use SNMP for network-device telemetry.
+- Monitor infrastructure availability and operational metrics.
+- Investigate monitoring problems and service conditions.
+- Build an operational NOC-style monitoring workflow.
 
-## Professional Objectives
+---
 
-The lab is also intended to develop:
+## Virtualization Objectives
 
-- Structured troubleshooting
-- Evidence-based decision making
-- Technical documentation
-- Incident communication
-- Root-cause analysis
-- Automation mindset
-- Operational discipline.
+- Build isolated virtual networks using VMware.
+- Deploy multiple infrastructure roles as virtual machines.
+- Integrate Proxmox into the monitoring environment.
+- Understand virtual networking and system connectivity.
+- Maintain an environment that can be expanded without redesigning the entire lab.
+
+---
+
+## Cybersecurity Objectives
+
+The security environment is intentionally isolated from the primary infrastructure.
+
+Objectives include:
+
+- Build an isolated security-testing environment.
+- Practice controlled reconnaissance.
+- Perform service enumeration.
+- Study vulnerability assessment workflows.
+- Analyze network and application traffic.
+- Integrate security telemetry and detection workflows.
+- Practice investigation and response procedures.
+- Develop a defender-oriented understanding of infrastructure security.
+
+---
+
+## Troubleshooting Objectives
+
+A major objective of the project is to develop structured troubleshooting ability.
+
+The troubleshooting process used in the lab is:
+
+```text
+Identify
+   ↓
+Collect Evidence
+   ↓
+Isolate the Problem
+   ↓
+Test Hypotheses
+   ↓
+Apply Corrective Action
+   ↓
+Validate
+   ↓
+Document
