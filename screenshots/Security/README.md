@@ -27,3 +27,9 @@ Nmap vulnerability scripts were used to assess the intentionally vulnerable Meta
 ![Web Service Enumeration](screenshots/security/24-web-service-enumeration.png)
 
 Nmap service detection was used to enumerate common web-service ports on the isolated Metasploitable2 target. The assessment identified an HTTP service running Apache HTTP Server.
+
+## HTTP Service Validation
+
+![HTTP Service Validation](screenshots/security/25-http-service-validation.png)
+
+HTTP response headers are retrieved from the isolated Metasploitable2 web service to validate application-layer connectivity and confirm the detected HTTP server.
