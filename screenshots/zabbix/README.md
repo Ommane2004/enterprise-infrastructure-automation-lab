@@ -27,3 +27,9 @@ The Proxmox virtualization environment is integrated into Zabbix to provide cent
 ![Zabbix Problems](screenshots/zabbix/13-zabbix-problems.png)
 
 The Problems view provides a centralized operational view of detected monitoring conditions and supports the investigation and validation workflow used in the lab.
+
+## NOC Monitoring Dashboard
+
+![Zabbix NOC Dashboard](screenshots/zabbix/14-zabbix-noc-dashboard.png)
+
+The NOC dashboard provides a centralized operational view of the lab environment, bringing together infrastructure availability, detected problems, network monitoring, servers, and virtualization monitoring.
