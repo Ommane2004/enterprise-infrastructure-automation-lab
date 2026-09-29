@@ -15,3 +15,9 @@ The VyOS routing table demonstrates the default path toward the pfSense gateway 
 ![pfSense Routing](screenshots/network/17-pfsense-routing.png)
 
 The pfSense firewall provides the upstream routing boundary for the lab. Static routes direct traffic for the internal client and server networks to the VyOS router across the transit network.
+
+## pfSense SNMP Configuration
+
+![pfSense SNMP Configuration](screenshots/network/18-pfsense-snmp-configuration.png)
+
+pfSense is configured as an SNMP-monitored network device. The SNMP daemon operates on UDP port 161 with the required monitoring modules enabled. Authentication data is intentionally excluded from the public portfolio.
