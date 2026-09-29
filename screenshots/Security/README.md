@@ -9,3 +9,9 @@ Kali Linux is connected to a dedicated security-testing network in addition to t
 ![Kali to Metasploitable2 Connectivity](screenshots/security/21-kali-metasploitable-connectivity.png)
 
 The isolated security network provides connectivity between Kali Linux and Metasploitable2 for controlled security testing within the lab environment.
+
+## Metasploitable2 Service Enumeration
+
+![Metasploitable2 Service Enumeration](screenshots/security/22-metasploitable-service-enumeration.png)
+
+Nmap service discovery is used to identify exposed TCP services and their reported versions on the intentionally vulnerable Metasploitable2 target. Testing is restricted to the isolated security-lab network.
