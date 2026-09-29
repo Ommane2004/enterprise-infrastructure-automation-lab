@@ -40,7 +40,8 @@ The design separates:
         Internal Client         Server / Management
              Network                 Network
 
-A separate isolated security-testing network exists:
+---
+##A separate isolated security-testing network exists:
                     SECURITY TESTING
                      172.16.50.0/24
                             |
