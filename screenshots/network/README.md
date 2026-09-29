@@ -21,3 +21,9 @@ The pfSense firewall provides the upstream routing boundary for the lab. Static 
 ![pfSense SNMP Configuration](screenshots/network/18-pfsense-snmp-configuration.png)
 
 pfSense is configured as an SNMP-monitored network device. The SNMP daemon operates on UDP port 161 with the required monitoring modules enabled. Authentication data is intentionally excluded from the public portfolio.
+
+## End-to-End Connectivity
+
+![End-to-End Network Connectivity](screenshots/network/19-end-to-end-connectivity.png)
+
+Connectivity testing validates the complete network path from the server network through VyOS and pfSense to the Internet. The test also verifies DNS resolution.
