@@ -15,3 +15,9 @@ Zabbix collects operational telemetry from the pfSense firewall through SNMP. Th
 ![VyOS SNMP Monitoring](screenshots/zabbix/11-zabbix-vyos-snmp.png)
 
 Zabbix monitors the VyOS router through SNMP and collects device and interface telemetry for infrastructure visibility and fault detection.
+
+## Proxmox Monitoring
+
+![Proxmox Monitoring](screenshots/zabbix/12-zabbix-proxmox-monitoring.png)
+
+The Proxmox virtualization environment is integrated into Zabbix to provide centralized infrastructure monitoring and operational visibility.
