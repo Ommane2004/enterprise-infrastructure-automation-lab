@@ -1,6 +1,6 @@
 ## Kali Security Network
 
-![Kali Security Network](screenshots/security/20-kali-security-network.png)
+![Kali Security Network](screenshots/Security/20-kali-security-network.png)
 
 Kali Linux is connected to a dedicated security-testing network in addition to the internal client network. The isolated security segment is used for controlled security exercises against lab targets.
 
