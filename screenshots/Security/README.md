@@ -21,3 +21,9 @@ Nmap service discovery is used to identify exposed TCP services and their report
 ![Metasploitable2 Vulnerability Assessment](screenshots/security/23-metasploitable-vulnerability-assessment.png)
 
 Nmap vulnerability scripts were used to assess the intentionally vulnerable Metasploitable2 target. The assessment identified the exposed FTP service and associated vulnerability findings within the isolated security-testing network.
+
+## Web Service Enumeration
+
+![Web Service Enumeration](screenshots/security/24-web-service-enumeration.png)
+
+Nmap service detection was used to enumerate common web-service ports on the isolated Metasploitable2 target. The assessment identified an HTTP service running Apache HTTP Server.
