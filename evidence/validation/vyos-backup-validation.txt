@@ -1,0 +1,36 @@
+Validation: VyOS Configuration Backup
+Platform: VyOS
+Purpose: Validate automated configuration backup execution and
+verify that the generated backup artifact has restricted permissions.
+
+Execution Result:
+PASS
+
+Ansible Execution Summary:
+ok=2
+changed=1
+unreachable=0
+failed=0
+
+Backup Artifact:
+Generated successfully.
+
+Example Artifact:
+core01_2026-09-22_111745.conf
+
+File Permissions:
+-rw------- 1 admin1 admin1
+
+Validation Result:
+PASS
+
+Interpretation:
+The automated VyOS backup workflow completed successfully and
+generated a configuration backup with restricted file permissions.
+
+Security Note:
+The actual backup contents are not published because configuration
+backups may contain sensitive infrastructure information.
+
+Evidence Type:
+Configuration backup and recovery-readiness validation
