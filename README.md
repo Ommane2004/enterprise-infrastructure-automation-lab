@@ -25,6 +25,8 @@ This project is designed as a practical engineering environment rather than a co
 
 The primary objectives of this lab are to:
 
+> **Lab Objectives** — Defines the networking, systems administration, automation, monitoring, virtualization, cybersecurity, troubleshooting, and portfolio objectives of the lab.
+
 1. Build an enterprise-style virtual network.
 2. Practice routing, switching concepts, addressing, DNS, DHCP, and segmentation.
 3. Automate infrastructure tasks using Ansible.
