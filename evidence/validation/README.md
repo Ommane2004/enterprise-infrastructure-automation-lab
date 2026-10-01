@@ -57,7 +57,8 @@ eth1 = UP / LOWER_UP
 10.10.10.0/24 route restored
       ↓
 Final configuration verified
+```
 
-Incident: https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/5cbc1cf23528df0e4721def65cce694bcbc28350/incidents/INC-001-vyos-interface-failure 
+Incident:https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/5cbc1cf23528df0e4721def65cce694bcbc28350/incidents/INC-001-vyos-interface-failure/
 
 Evidence Index:https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/ff9e39b33eab0d75df98bd8a7b08c3fc1366934b/evidence/INDEX.md
