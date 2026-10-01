@@ -4,15 +4,17 @@ INC-003 — Investigation Evidence
 Investigate a controlled SSH service outage on RHEL01 and determine why remote Ansible management failed while IP connectivity remained available.
 
 2. Affected System
-Property	Value
-Hostname	rhel01.corp.lab
-Ansible inventory alias	rhel01
-IP address	10.10.20.30
-Operating system	RHEL 9.8
-SSH service	sshd
-SSH port	TCP/22
-Ansible controller	Zabbix01
-3. Baseline Evidence
+|Property	                |       Value         |
+|-------------------------|---------------------|
+|Hostname	                |  rhel01.corp.lab    |
+|Ansible inventory alias	|      rhel01         |
+|IP address	              |    10.10.20.30      |
+|Operating system	        |     RHEL 9.8        |
+|SSH service	            |       sshd          |
+|SSH port	                |      TCP/22         |
+|Ansible controller       |   	Zabbix01        |
+
+4. Baseline Evidence
 
 Before failure injection, the following checks succeeded:
 
@@ -44,11 +46,12 @@ ssh: connect to host 10.10.20.30 port 22: Connection refused
 Ansible reported the host as UNREACHABLE.
 
 5. Evidence Analysis
-Test	Observation	Interpretation
-SSH service state	inactive	SSH service was stopped
-ICMP connectivity	4/4 replies	Host remained reachable over IP
-TCP/22 connection	Connection refused	SSH connection could not be established
-Ansible connectivity	UNREACHABLE	Remote management failed over SSH
+|Test	                 |  Observation	        |Interpretation                         |
+|----------------------|----------------------|---------------------------------------|
+|SSH service state	   |   inactive	          |SSH service was stopped                |
+|ICMP connectivity	   |   4/4 replies       	|Host remained reachable over IP        |
+|TCP/22 connection	   |   Connection refused	|SSH connection could not be established|
+|Ansible connectivity	 |  UNREACHABLE	        |Remote management failed over SSH      |
 
 The combination of successful ICMP responses and a refused SSH connection was consistent with a service-availability failure rather than a complete loss of host connectivity.
 
