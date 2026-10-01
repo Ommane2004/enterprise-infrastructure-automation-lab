@@ -29,8 +29,8 @@ show interfaces
 ```
 **Output**
 Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down
-Interface    IP Address           MAC                VRF        MTU    S/L    Description
-||---------|-----------------|--------------|--------------|--------|-------|---------------------|
+|Interface |   IP Address    |       MAC    |      VRF     |   MTU  |  S/L  |  Description        |
+|----------|-----------------|--------------|--------------|--------|-------|---------------------|
 |eth0      |  192.168.0.2/24 |[REDACTED]    |     default  | 1500   |  u/u  |  TRANSIT_TO_PFSENSE |
 |eth1      |  10.10.10.1/24  | [REDACTED]   |      default |  1500  |  u/u  |  INTERNA_LAN        |
 |eth2      |  10.10.20.1/24  |[REDACTED]    |     default  | 1500   |  u/u  |  SERVER_NETWORK     |
