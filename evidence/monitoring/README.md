@@ -167,17 +167,28 @@ INC-004 — SNMP Monitoring Failure Evidence
 These screenshots document the baseline monitoring state, controlled SNMP service interruptions, and recovery observations for VyOS and pfSense.
 
 General baseline
+
 [21-inc-004-snmp-baseline.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/21-inc-004-snmp-baseline.png) — Baseline SNMP monitoring overview.
+
 VyOS
 [22-inc-004-vyos-snmp-baseline.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/22-inc-004-vyos-snmp-baseline.png) — VyOS SNMP baseline.
+
 [25-inc-004-vyos-snmp-failure.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/25-inc-004-vyos-snmp-failure.png) — VyOS SNMP monitoring failure.
+
 [27-inc-004-vyos-snmp-service-before.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/27-inc-004-vyos-snmp-service-before.png) — VyOS SNMP service before failure injection.
+
 [28-inc-004-vyos-snmp-service-failure.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/28-inc-004-vyos-snmp-service-failure.png) — VyOS SNMP service during failure.
+
 [29-inc-004-vyos-snmp-recovery.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/29-inc-004-vyos-snmp-recovery.png) — VyOS SNMP service recovery.
+
 pfSense
+
 [23-inc-004-pfsense-snmp-baseline.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/23-inc-004-pfsense-snmp-baseline.png) — pfSense SNMP baseline.
+
 [31-inc-004-pfsense-snmp-failure.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/31-inc-004-pfsense-snmp-failure.png) — pfSense SNMP monitoring failure.
+
 [33-inc-004-pfsense-snmp-recovery.png ](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/33-inc-004-pfsense-snmp-recovery.png)— pfSense SNMP availability recovery.
+
 Related connectivity evidence
 
 Connectivity checks performed before and during each failure are documented in [../validation/README.md.](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/validation/README.md)
