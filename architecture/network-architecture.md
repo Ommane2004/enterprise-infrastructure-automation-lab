@@ -80,3 +80,38 @@ VyOS routing state restored
 Incident documentation: INC-001 — VyOS eth1 Interface Failure
 
 Evidence index: [(enterprise-infrastructure-automation-lab/main/evidence/INDEX.md)](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/42530ac1757da24250ab7a77616a1d9e5ab5a013/evidence/INDEX.md)
+
+## Incident Validation
+
+The network architecture has been validated through controlled failure and recovery exercises.
+
+### INC-001 — VyOS Interface Failure
+
+A controlled shutdown of the VyOS `eth1` internal interface was used to validate:
+
+- Interface-state troubleshooting
+- Routing-table changes
+- Connectivity failure detection
+- Service restoration
+- Post-remediation validation
+
+See:
+
+[INC-001 — VyOS Interface Failure](../incidents/INC-001-vyos-interface-failure/README.md)
+
+### INC-002 — DNS Failure
+
+A controlled DNS Server service outage on `DC01` was used to validate:
+
+- DNS service availability troubleshooting
+- Separation of IP connectivity from DNS functionality
+- DNS resolution testing
+- Windows Server service-state analysis
+- Service restoration
+- Functional DNS recovery validation
+
+The Windows 10 client remained able to reach `DC01` over IP while DNS queries failed, demonstrating that host reachability and DNS service availability must be tested separately.
+
+See:
+
+[INC-002 — DNS Failure](../incidents/INC-002-dns-failure/README.md)
