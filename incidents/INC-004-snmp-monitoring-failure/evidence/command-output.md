@@ -136,6 +136,4 @@ These are summarized observations; consult the corresponding screenshots for the
 Related Evidence
 
 See the[ evidence index](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/c87d3cc55a69a4b207f475add8f0dabaf229bb2c/evidence/INDEX.md) and the screenshots under [evidence/monitoring/](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/3e7814b378868f30645fcd47657c2ae20aeb6a88/evidence/monitoring) and [evidence/validation/](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/3e7814b378868f30645fcd47657c2ae20aeb6a88/evidence/validation).
-Related Evidence
 
-See the evidence index and the screenshots under evidence/monitoring/ and evidence/validation/.
