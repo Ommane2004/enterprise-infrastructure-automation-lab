@@ -4,6 +4,7 @@ INC-003 — Investigation Evidence
 Investigate a controlled SSH service outage on RHEL01 and determine why remote Ansible management failed while IP connectivity remained available.
 
 2. Affected System
+
 |Property	                |       Value         |
 |-------------------------|---------------------|
 |Hostname	                |  rhel01.corp.lab    |
