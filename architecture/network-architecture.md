@@ -79,4 +79,4 @@ VyOS routing state restored
 
 Incident documentation: INC-001 — VyOS eth1 Interface Failure
 
-Evidence index: evidence/INDEX.md
+Evidence index: enterprise-infrastructure-automation-lab/main/evidence/INDEX.md
