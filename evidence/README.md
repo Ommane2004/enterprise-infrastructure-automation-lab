@@ -60,6 +60,9 @@ The recorded ping tests returned four replies with 0% packet loss for each devic
 This evidence supports the conclusion that IP reachability remained available while SNMP monitoring was interrupted. It does not, by itself, establish that all other device services were operational.
 
 Related evidence
-Monitoring evidence README
-INC-004 investigation
-Evidence index
+
+[Monitoring evidence README](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/200358f9c9a250d019591b62aa9fb28c35597e31/evidence/monitoring/README.md)
+
+[INC-004 investigation](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/200358f9c9a250d019591b62aa9fb28c35597e31/incidents/INC-004-snmp-monitoring-failure/evidence/investigation.md)
+
+[Evidence index](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/200358f9c9a250d019591b62aa9fb28c35597e31/evidence/INDEX.md)
