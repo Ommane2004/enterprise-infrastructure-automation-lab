@@ -25,7 +25,7 @@ eth1  10.10.10.1/24  u/u
 ```
 This established the expected healthy state.
 
-2. Controlled failure injection
+**###2. Controlled failure injection**
 
 A controlled administrative shutdown was applied to eth1:
 
@@ -35,7 +35,7 @@ The configuration was committed.
 
 This intentionally simulated an interface failure affecting the Internal LAN.
 
-3. Interface failure observed
+**3. Interface failure observed**
 
 After the failure was committed, eth1 changed to:
 
@@ -49,7 +49,7 @@ state DOWN
 
 while the IP address 10.10.10.1/24 remained configured.
 
-4. Routing impact observed
+**4. Routing impact observed**
 
 The connected route for the Internal LAN disappeared:
 
@@ -63,7 +63,7 @@ The routing table no longer contained:
 
 This demonstrated the direct relationship between the disabled interface and loss of the connected route.
 
-5. Connectivity impact observed
+**5. Connectivity impact observed**
 
 A connectivity test toward 10.10.10.10 was performed while the interface was disabled.
 
@@ -75,7 +75,7 @@ The output also showed ICMP redirects from 192.168.0.1.
 
 The connectivity failure was therefore consistent with the loss of the Internal LAN route.
 
-6. Investigation
+**6. Investigation**
 
 The interface configuration and operational state were inspected.
 
@@ -97,7 +97,7 @@ The Internal LAN DHCP configuration also remained associated with:
 with gateway:
 
 10.10.10.1
-7. Remediation
+**7. Remediation**
 
 The temporary failure configuration was removed:
 
@@ -105,7 +105,7 @@ delete interfaces ethernet eth1 disable
 
 The configuration was committed.
 
-8. Interface recovery
+**8. Interface recovery**
 
 After remediation, eth1 returned to:
 
@@ -119,7 +119,7 @@ configured.
 
 This confirmed that the interface itself had recovered.
 
-9. Routing recovery
+**9. Routing recovery**
 
 The connected route was restored:
 
@@ -130,7 +130,7 @@ Routing entry for 10.10.10.0/24
 
 This confirmed recovery of the VyOS routing state for the Internal LAN.
 
-10. Endpoint connectivity test
+**10. Endpoint connectivity test**
 
 A subsequent ping to:
 
@@ -145,7 +145,7 @@ The Windows 10 endpoint was confirmed to be powered off at the time of this test
 
 Therefore, this result is documented as an endpoint availability condition and not as evidence that the VyOS interface remediation failed.
 
-11. Final configuration verification
+**11. Final configuration verification**
 
 The final VyOS configuration was inspected.
 
