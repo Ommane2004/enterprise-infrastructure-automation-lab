@@ -130,3 +130,45 @@ Client Network
        │
        ▼
    Internet
+
+```
+5.## Incident Evidence
+
+### INC-001 — VyOS `eth1` Interface Failure
+
+Controlled infrastructure failure demonstrating the relationship between interface state, connected routing, network reachability, configuration analysis, remediation, and recovery validation.
+
+**Incident:** [`INC-001-vyos-interface-failure`](../incidents/INC-001-vyos-interface-failure/)
+
+**Evidence:**
+
+- [Incident Overview](../incidents/INC-001-vyos-interface-failure/README.md)
+- [Incident Timeline](../incidents/INC-001-vyos-interface-failure/timeline.md)
+- [Investigation Evidence](../incidents/INC-001-vyos-interface-failure/evidence/investigation.md)
+- [Root Cause Analysis](../incidents/INC-001-vyos-interface-failure/evidence/root-cause.md)
+- [Remediation & Recovery](../incidents/INC-001-vyos-interface-failure/evidence/remediation.md)
+- [Lessons Learned](../incidents/INC-001-vyos-interface-failure/evidence/lessons-learned.md)
+- [Command Output Evidence](../incidents/INC-001-vyos-interface-failure/evidence/command-output.md)
+
+### Evidence Chain
+
+```text
+INC-001
+   ↓
+Controlled Interface Failure
+   ↓
+Interface State Evidence
+   ↓
+Routing Evidence
+   ↓
+Connectivity Evidence
+   ↓
+Configuration Evidence
+   ↓
+Root Cause
+   ↓
+Remediation
+   ↓
+Recovery Validation
+   ↓
+Lessons Learned
