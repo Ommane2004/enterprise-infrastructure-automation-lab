@@ -64,9 +64,27 @@ UP / LOWER_UP
     ↓
 VyOS network state recovered
 ```
+### INC-002 — DNS Service Failure
 
-Incident documentation: INC-001 — VyOS eth1 Interface Failure
+The monitoring and operational model was also validated through a controlled DNS service failure on `DC01`.
 
-Monitoring evidence: Monitoring Evidence
+During the failure:
 
-Evidence index:https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/ff9e39b33eab0d75df98bd8a7b08c3fc1366934b/evidence/INDEX.md
+- `DC01` remained reachable over IP.
+- The DNS Server service was stopped.
+- DNS queries from the Windows client timed out.
+- Service restoration returned DNS resolution to normal.
+
+This demonstrates the distinction between:
+
+```text
+Host Availability
+        ↓
+Service Availability
+        ↓
+Application Functionality
+```
+See:
+
+INC-002 — [DNS Failure
+](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/d522a4bc22f32a083a3aa42c0cef71584fe590ac/incidents/INC-002-dns-failure)
