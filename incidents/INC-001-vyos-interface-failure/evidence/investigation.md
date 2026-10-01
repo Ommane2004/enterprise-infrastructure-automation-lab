@@ -131,7 +131,7 @@ Therefore, loss of eth1 affects more than interface availability: it removes the
 6. Evidence Correlation
 
 The investigation produced the following evidence chain:
-------------------------------------------------------------------------------------------------------------
+
 |Investigation Area	       |          Evidence	                |       Finding                            |
 ------------------------------------------------------------------------------------------------------------
 |Interface state	         |          eth1 = A/D	              |      Interface administratively disabled |
@@ -140,7 +140,7 @@ The investigation produced the following evidence chain:
 |Connectivity	             |      100% packet loss       	      |    Internal endpoint unreachable         |
 |Configuration	           |        eth1 disable present   	    |      Direct failure condition identified |
 |DHCP configuration	       |   10.10.10.0/24 gateway 10.10.10.1	|    Interface is the LAN gateway          |
-------------------------------------------------------------------------------------------------------------
+
 7. Diagnostic Reasoning
 
 The investigation followed this sequence:
