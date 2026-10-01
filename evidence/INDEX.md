@@ -189,3 +189,26 @@ Controlled DNS service outage on DC01.
 - Final DNS zone validation
 
 [View INC-002 Evidence](../incidents/INC-002-dns-failure/README.md)
+
+INC-003 — SSH Service Failure
+
+Status: Resolved
+
+Scenario: The SSH daemon on RHEL01 (10.10.20.30) was deliberately stopped to simulate a remote-management outage.
+
+Key findings:
+
+ICMP connectivity remained available.
+SSH connections to TCP/22 were refused.
+Ansible reported the host as UNREACHABLE.
+Restarting sshd restored SSH-based Ansible connectivity.
+
+Evidence:
+
+[Incident overview](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure)
+[Timeline](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/timeline.md)
+[Investigation](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/investigation.md)
+[Root cause analysis](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/root-cause.md)
+[Remediation and recovery](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/remediation.md)
+[Lessons learned](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/lessons-learned.md)
+[Command output evidence](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/command-output.md)
