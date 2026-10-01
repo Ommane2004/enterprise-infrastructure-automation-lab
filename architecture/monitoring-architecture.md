@@ -63,9 +63,10 @@ UP / LOWER_UP
 10.10.10.0/24 connected route restored
     ↓
 VyOS network state recovered
+```
 
 Incident documentation: INC-001 — VyOS eth1 Interface Failure
 
 Monitoring evidence: Monitoring Evidence
 
-Evidence index: [Evidence Index](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/42530ac1757da24250ab7a77616a1d9e5ab5a013/evidence/INDEX.md)
+Evidence index:https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/ff9e39b33eab0d75df98bd8a7b08c3fc1366934b/evidence/INDEX.md
