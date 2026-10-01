@@ -212,3 +212,17 @@ Evidence:
 [Remediation and recovery](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/remediation.md)
 [Lessons learned](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/lessons-learned.md)
 [Command output evidence](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/8293cd8aa2fce3a79294635fb3c7b5a4e191ac02/incidents/INC-003-service-failure/evidence/command-output.md)
+
+INC-004 — SNMP Monitoring Failure
+
+Controlled SNMP monitoring failures were tested independently on VyOS and pfSense. During the VyOS test, the SNMP daemon was stopped while ICMP connectivity remained available. During the pfSense test, Zabbix reported SNMP agent availability as not available (0) while pfSense remained reachable over IP. SNMP was restored on both devices, and pfSense availability returned to available (1).
+
+Evidence
+
+pfSense SNMP failure
+pfSense SNMP recovery
+pfSense connectivity before failure
+pfSense connectivity during failure
+VyOS SNMP service failure
+VyOS SNMP recovery
+VyOS connectivity during failure
