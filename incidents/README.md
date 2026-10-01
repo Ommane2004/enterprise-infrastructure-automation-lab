@@ -181,6 +181,17 @@ INC-003 — SSH Service Failure
 
 Status: Resolved
 
+INC-004 — SNMP Monitoring Failure: VyOS and pfSense
+Category: Infrastructure monitoring / SNMP
+Devices: VyOS and pfSense
+Scenario: Controlled SNMP service interruption while IP connectivity remained available
+[Investigation: Investigation findings](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/evidence/investigation.md)
+[Root cause: Root cause analysis](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/evidence/root-cause.md)
+[Remediation: Recovery procedures](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/evidence/remediation.md)
+[Lessons learned: Operational lessons](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/evidence/lessons-learned.md)
+[Technical evidence: Command output and observations](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/evidence/command-output.md)
+[Timeline: Incident timeline](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/184f80a2e4059f8f729071955efce1788dee837a/incidents/INC-004-snmp-monitoring-failure/timeline.md)
+
 Summary: A controlled failure-injection exercise stopped the SSH daemon on RHEL01 (10.10.20.30). ICMP connectivity remained available, but SSH connections and Ansible remote management failed. Restarting sshd restored connectivity, confirmed by service-state checks and a successful Ansible ping.
 
 Documentation: INC-003 — [SSH Service Failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/35bd1221581c66d6adcac5449a9f9912af814e8c/incidents/INC-003-service-failure)
