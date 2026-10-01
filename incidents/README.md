@@ -176,3 +176,11 @@ Detect → Investigate → Explain → Remediate → Validate → Improve
 - [Remediation](INC-002-dns-failure/evidence/remediation.md)
 - [Lessons Learned](INC-002-dns-failure/evidence/lessons-learned.md)
 - [Command Output](INC-002-dns-failure/evidence/command-output.md)**
+
+INC-003 — SSH Service Failure
+
+Status: Resolved
+
+Summary: A controlled failure-injection exercise stopped the SSH daemon on RHEL01 (10.10.20.30). ICMP connectivity remained available, but SSH connections and Ansible remote management failed. Restarting sshd restored connectivity, confirmed by service-state checks and a successful Ansible ping.
+
+Documentation: INC-003 — [SSH Service Failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/tree/35bd1221581c66d6adcac5449a9f9912af814e8c/incidents/INC-003-service-failure)
