@@ -133,7 +133,7 @@ Therefore, loss of eth1 affects more than interface availability: it removes the
 The investigation produced the following evidence chain:
 
 |Investigation Area	       |          Evidence	                |       Finding                            |
-------------------------------------------------------------------------------------------------------------
+|--------------------------|------------------------------------|------------------------------------------|
 |Interface state	         |          eth1 = A/D	              |      Interface administratively disabled |
 |Detailed interface state	 |         state DOWN	                |    Interface unavailable                 |
 |Routing table         	   |      10.10.10.0/24 absent	        |    Connected route removed               |
