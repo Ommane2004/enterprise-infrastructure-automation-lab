@@ -171,6 +171,7 @@ General baseline
 [21-inc-004-snmp-baseline.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/21-inc-004-snmp-baseline.png) — Baseline SNMP monitoring overview.
 
 VyOS
+
 [22-inc-004-vyos-snmp-baseline.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/22-inc-004-vyos-snmp-baseline.png) — VyOS SNMP baseline.
 
 [25-inc-004-vyos-snmp-failure.png](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/4213c73132253b29ae66a307df57c81ada084b12/evidence/monitoring/25-inc-004-vyos-snmp-failure.png) — VyOS SNMP monitoring failure.
