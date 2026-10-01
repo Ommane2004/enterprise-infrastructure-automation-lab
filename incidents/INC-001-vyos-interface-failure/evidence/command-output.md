@@ -29,12 +29,12 @@ show interfaces
 ```
 **Output**
 Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down
-Interface    IP Address      MAC                VRF        MTU  S/L    Description
------------  --------------  -----------------  -------  -----  -----  ------------------
-eth0         192.168.0.2/24  [REDACTED]         default   1500  u/u    TRANSIT_TO_PFSENSE
-eth1         10.10.10.1/24   [REDACTED]         default   1500  u/u    INTERNA_LAN
-eth2         10.10.20.1/24   [REDACTED]         default   1500  u/u    SERVER_NETWORK
-lo           127.0.0.1/8     [REDACTED]         default  65536  u/u
+Interface    IP Address           MAC                VRF        MTU    S/L    Description
+||---------|-----------------|--------------|--------------|--------|-------|---------------------|
+|eth0      |  192.168.0.2/24 |[REDACTED]    |     default  | 1500   |  u/u  |  TRANSIT_TO_PFSENSE |
+|eth1      |  10.10.10.1/24  | [REDACTED]   |      default |  1500  |  u/u  |  INTERNA_LAN        |
+|eth2      |  10.10.20.1/24  |[REDACTED]    |     default  | 1500   |  u/u  |  SERVER_NETWORK     |
+|lo        |   127.0.0.1/8   | [REDACTED]   |      default | 65536  |  u/u  |                     |
              ::1/128
 Observation
 
@@ -45,7 +45,7 @@ u/u
 
 This established the baseline interface state.
 
-2. Baseline — Connected Route
+**2. Baseline — Connected Route**
 Command
 show ip route 10.10.10.0/24
 Output
@@ -59,7 +59,7 @@ Observation
 
 The Internal LAN was directly connected through eth1.
 
-3. Failure Injection
+**3. Failure Injection**
 Configuration Change
 
 The controlled failure was introduced by disabling eth1:
@@ -68,17 +68,17 @@ set interfaces ethernet eth1 disable
 
 The configuration was committed.
 
-4. Failure State — Interface
+**4. Failure State — Interface**
 Command
 show interfaces
 Output
 Codes: S - State, L - Link, u - Up, D - Down, A - Admin Down
-Interface    IP Address      MAC                VRF        MTU  S/L    Description
------------  --------------  -----------------  -------  -----  -----  ------------------
-eth0         192.168.0.2/24  [REDACTED]         default   1500  u/u    TRANSIT_TO_PFSENSE
-eth1         10.10.10.1/24   [REDACTED]         default   1500  A/D    INTERNA_LAN
-eth2         10.10.20.1/24   [REDACTED]         default   1500  u/u    SERVER_NETWORK
-lo           127.0.0.1/8     [REDACTED]         default  65536  u/u
+|Interface  |  IP Address     |  MAC          |      VRF    |  MTU  | S/L  |  Description        |
+|-----------|-----------------|---------------|-------------|-------|------|---------------------|
+|eth0       |  192.168.0.2/24 | [REDACTED]    |     default |  1500 | u/u  |  TRANSIT_TO_PFSENSE |
+|eth1       |  10.10.10.1/24  | [REDACTED]    |     default |  1500 | A/D  |  INTERNA_LAN        |
+|eth2       |  10.10.20.1/24  | [REDACTED]    |     default |  1500 | u/u  |  SERVER_NETWORK     |
+|lo         |  127.0.0.1/8    | [REDACTED]    |     default | 65536 | u/u  |
              ::1/128
 Observation
 
@@ -88,7 +88,7 @@ A/D
 
 The interface was administratively down and operationally down.
 
-5. Failure State — Routing
+**5. Failure State — Routing**
 Command
 show ip route 10.10.10.0/24
 Output
@@ -97,7 +97,7 @@ Observation
 
 The connected route for 10.10.10.0/24 was no longer present.
 
-6. Failure State — Connectivity
+**6. Failure State — Connectivity**
 Command
 ping 10.10.10.10
 Output
@@ -117,7 +117,7 @@ Observation
 
 The Internal LAN endpoint was unreachable while the connected route was absent.
 
-7. Failure State — Detailed Interface Inspection
+**7. Failure State — Detailed Interface Inspection**
 Command
 show interfaces ethernet eth1
 Output
@@ -137,7 +137,7 @@ Observation
 
 The IP address remained configured, while the interface itself was down.
 
-8. Failure State — Configuration
+**8. Failure State — Configuration**
 Command
 show configuration commands | match "eth1"
 Output
@@ -153,7 +153,7 @@ Observation
 
 The administrative disable statement was present in the active configuration.
 
-9. Remediation
+**9. Remediation**
 Configuration Change
 
 The controlled failure condition was removed:
@@ -163,7 +163,8 @@ delete interfaces ethernet eth1 disable
 The configuration was committed:
 
 commit
-10. Recovery — Interface
+
+**10. Recovery — Interface**
 Command
 show interfaces ethernet eth1
 Output
@@ -185,7 +186,8 @@ UP, LOWER_UP
 The configured address remained:
 
 10.10.10.1/24
-11. Recovery — Routing
+
+**11. Recovery — Routing**
 Command
 show ip route 10.10.10.0/24
 Output
@@ -199,7 +201,7 @@ Observation
 
 The connected route for the Internal LAN was restored through eth1.
 
-12. Recovery — Endpoint Test
+**12. Recovery — Endpoint Test**
 Command
 ping 10.10.10.10
 Output
@@ -223,7 +225,7 @@ The Windows 10 endpoint was confirmed to be powered off during this test.
 
 Therefore, this result is recorded as an endpoint availability condition, not as evidence that the VyOS interface remediation failed.
 
-13. Final Configuration Verification
+**13. Final Configuration Verification**
 Command
 show configuration commands | match "eth1"
 Output
@@ -242,14 +244,16 @@ set interfaces ethernet eth1 disable
 
 was no longer present.
 
-Evidence Summary
-Evidence	Failure State	Recovery State
-eth1	A/D	UP, LOWER_UP
-10.10.10.1/24	Configured	Configured
-10.10.10.0/24 route	Absent	Connected via eth1
-eth1 disable	Present	Absent
-Endpoint ping	100% loss	Not testable because endpoint powered off
-Evidence Conclusion
+**Evidence Summary**
+|Evidence      	      |   Failure State	  |  Recovery State                                 |
+|---------------------|-------------------|-------------------------------------------------|
+|eth1	                |    A/D	          |     UP, LOWER_UP                                | 
+|10.10.10.1/24	      |  Configured	      |   Configured                                    |
+|10.10.10.0/24 route  |  	Absent	        |   Connected via eth1                            | 
+|eth1 disable	        |   Present	        |   Absent                                        | 
+|Endpoint ping	      |  100% loss	      |   Not testable because endpoint powered off     |
+
+**Evidence Conclusion**
 
 The command outputs establish the following sequence:
 
