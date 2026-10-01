@@ -97,3 +97,41 @@ Record the actual remediation, restored service state, client lease status, and 
 |Recovery validated	                        |   Pending       |
 
 Update this table only when each check has been performed and its result documented.
+
+Baseline Evidence — 1 October 2026
+Windows 10 Client
+Hostname: DESKTOP-JMEKHSC
+DHCP Enabled: Yes
+IPv4 Address: 10.10.10.10
+Subnet Mask: 255.255.255.0
+Default Gateway: 10.10.10.1
+DHCP Server: 10.10.10.1
+DNS Server: 10.10.20.10
+Lease Obtained: 1 October 2026, 21:27:30 (Windows local time)
+Lease Expires: 2 October 2026, 21:27:29 (Windows local time)
+VyOS DHCP Lease
+
+Command: show dhcp server leases
+
+Observed result:
+
+Client address: 10.10.10.10
+Lease state: active
+Pool: INTERNAL
+Hostname: desktop-jmekhsc.corp.lab
+Lease start: 2026-10-01 15:44:51 (VyOS-reported time)
+Lease expiration: 2026-10-02 15:44:51 (VyOS-reported time)
+
+The client's MAC address has been omitted from this public evidence record.
+
+DHCP Service State
+
+Command: sudo systemctl --type=service --all | grep -Ei 'kea|dhcp'
+
+Observed result:
+
+isc-kea-dhcp4-server.service — loaded, active, running.
+
+Preliminary Assessment
+
+The client is configured for DHCP, the VyOS DHCPv4 service is running, and VyOS reports an active lease for the client. No DHCP failure has been established at baseline.
