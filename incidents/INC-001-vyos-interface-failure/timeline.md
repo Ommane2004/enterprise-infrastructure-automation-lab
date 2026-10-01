@@ -25,8 +25,6 @@ eth1  10.10.10.1/24  u/u
 ```
 This established the expected healthy state.
 
-## Timeline
-
 **2. Controlled failure injection**
 
 A controlled administrative shutdown was applied to eth1:
