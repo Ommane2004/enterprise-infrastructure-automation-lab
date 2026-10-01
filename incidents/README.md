@@ -43,7 +43,7 @@ Repeatable troubleshooting procedures
 |----------------|-----------------------------------|----------------------------------|
 |INC-001	       |   VyOS eth1 Interface Failur      |  Networking / Routing	Resolved  |
 
-**INC-001 — VyOS eth1 Interface Failure**
+**1.**INC-001 — VyOS eth1 Interface Failure****
 
 Type: Controlled infrastructure failure
 Affected network: 10.10.10.0/24 — Internal LAN
@@ -160,3 +160,19 @@ The purpose of incident documentation is not to demonstrate that failures never 
 It is to demonstrate the ability to:
 
 Detect → Investigate → Explain → Remediate → Validate → Improve
+
+**### INC-002 — DNS Failure
+
+**Status:** Resolved  
+**Category:** DNS / Windows Server / Active Directory  
+**System:** DC01  
+**Failure:** Windows DNS Server service stopped  
+**Validation:** IP connectivity remained healthy while DNS resolution failed; service restoration returned DNS resolution to normal.
+
+- [Incident Overview](INC-002-dns-failure/README.md)
+- [Timeline](INC-002-dns-failure/timeline.md)
+- [Investigation](INC-002-dns-failure/evidence/investigation.md)
+- [Root Cause](INC-002-dns-failure/evidence/root-cause.md)
+- [Remediation](INC-002-dns-failure/evidence/remediation.md)
+- [Lessons Learned](INC-002-dns-failure/evidence/lessons-learned.md)
+- [Command Output](INC-002-dns-failure/evidence/command-output.md)**
