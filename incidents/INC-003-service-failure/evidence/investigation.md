@@ -47,6 +47,7 @@ ssh: connect to host 10.10.20.30 port 22: Connection refused
 Ansible reported the host as UNREACHABLE.
 
 5. Evidence Analysis
+
 |Test	                 |  Observation	        |Interpretation                         |
 |----------------------|----------------------|---------------------------------------|
 |SSH service state	   |   inactive	          |SSH service was stopped                |
