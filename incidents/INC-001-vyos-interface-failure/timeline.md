@@ -219,4 +219,4 @@ The subsequent inability to reach 10.10.10.10 was separately explained by the Wi
 
 The incident demonstrates the relationship between:
 
-Interface state → connected route → network reachability → troubleshooting evidence → remediation → recovery validation.
+Interface state → connected route → network reachability → troubleshooting evidence → remediation → recovery validation
