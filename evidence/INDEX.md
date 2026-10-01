@@ -172,3 +172,20 @@ Remediation
 Recovery Validation
    ↓
 Lessons Learned
+```
+### INC-002 — DNS Failure
+
+Controlled DNS service outage on DC01.
+
+**Evidence demonstrates:**
+
+- Healthy baseline DNS state
+- Controlled DNS service failure
+- Successful IP connectivity during DNS outage
+- DNS resolution timeouts
+- Server-side service-state confirmation
+- DNS service remediation
+- Functional DNS recovery
+- Final DNS zone validation
+
+[View INC-002 Evidence](../incidents/INC-002-dns-failure/README.md)
