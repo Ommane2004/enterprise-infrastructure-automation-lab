@@ -219,10 +219,43 @@ Controlled SNMP monitoring failures were tested independently on VyOS and pfSens
 
 Evidence
 
-pfSense SNMP failure
-pfSense SNMP recovery
-pfSense connectivity before failure
-pfSense connectivity during failure
-VyOS SNMP service failure
-VyOS SNMP recovery
-VyOS connectivity during failure
+[pfSense SNMP failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/monitoring/31-inc-004-pfsense-snmp-failure.png)
+[pfSense SNMP recovery](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/monitoring/33-inc-004-pfsense-snmp-recovery.png)
+[pfSense connectivity before failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/validation/30-inc-004-pfsense-connectivity-before.png)
+[pfSense connectivity during failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-[lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/validation/32-inc-004-pfsense-connectivity-during-failure.png)
+[VyOS SNMP service failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/monitoring/28-inc-004-vyos-snmp-service-failure.png)
+[VyOS SNMP recovery](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/monitoring/29-inc-004-vyos-snmp-recovery.png)
+[VyOS connectivity during failure](https://github.com/Ommane2004/enterprise-infrastructure-automation-lab/blob/72e38b1c8bf0db20bf31aef1930f204c73cd39a4/evidence/validation/26-inc-004-vyos-connectivity-during-failure.png)
+
+INC-004 — SNMP Monitoring Failure
+
+Objective: Demonstrate how an SNMP monitoring failure affects observability while IP connectivity remains available, and validate recovery on VyOS and pfSense.
+
+Incident workflow: Baseline → Failure injection → Connectivity validation → Recovery → Monitoring verification.
+
+Monitoring evidence
+
+|Evidence	                         |                            Description                           |
+|------------------------------------|------------------------------------------------------------------|
+|SNMP baseline	                     |          Both devices visible in Zabbix before testing           |
+|VyOS SNMP baseline                  |            	VyOS SNMP metrics before failure                    |
+|pfSense SNMP baseline	             |             pfSense SNMP metrics before failure                  |
+|VyOS SNMP failure	                 |         Zabbix monitoring symptoms during the VyOS test          |
+|VyOS service before failure	     |                SNMP daemon running before failure injection      |
+|VyOS service failure	             |                       SNMP daemon stopped                        |
+|VyOS SNMP recovery	                 |             Monitoring after VyOS SNMP recovery                  | 
+|pfSense SNMP failure	             |            Zabbix reports SNMP agent unavailable                 |
+|pfSense SNMP recovery	             |             Zabbix reports SNMP agent available again            |
+
+Connectivity validation evidence
+
+|Evidence	                                  |                 Description                                        |
+|---------------------------------------------|--------------------------------------------------------------------|
+|VyOS connectivity before failure	          |            Baseline ping to VyOS                                   |
+|VyOS connectivity during failure	          |    Ping succeeds while VyOS SNMP is stopped                        |
+|pfSense connectivity before failure	      |             Baseline ping to pfSense                               |
+|pfSense connectivity during failure	      |     Ping succeeds while pfSense SNMP monitoring is unavailable     |
+
+Key finding: SNMP monitoring availability and IP reachability are separate. During the VyOS test, the SNMP daemon was inactive while ping continued to succeed. During the pfSense test, Zabbix reported SNMP agent availability = 0; after SNMP was restored, it returned to 1.
+
+Recovery: SNMP was restored on both devices. Verify the latest Zabbix data and recovery evidence when reviewing this incident.
