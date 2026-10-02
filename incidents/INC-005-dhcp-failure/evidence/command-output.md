@@ -135,3 +135,25 @@ isc-kea-dhcp4-server.service — loaded, active, running.
 Preliminary Assessment
 
 The client is configured for DHCP, the VyOS DHCPv4 service is running, and VyOS reports an active lease for the client. No DHCP failure has been established at baseline.
+
+Additional DHCP Dependency Checks
+Kali Linux
+eth0: 10.10.10.11/24, dynamically assigned.
+Default gateway: 10.10.10.1.
+Default route protocol: dhcp.
+eth1: 172.16.50.20/24, with no DHCP default route shown.
+
+Assessment: Kali uses DHCP on the INTERNAL network and has a separate interface on the isolated security-testing network.
+
+Other Checked Systems
+DC01 (10.10.20.10/24): DHCP disabled; static IPv4 configuration.
+Zabbix01 (10.10.20.20/24): address lifetime is forever; default route is static.
+RHEL01 (10.10.20.30/24): address lifetime is forever; default route is static.
+
+These checks confirm static-looking IPv4 configurations for the three server systems. The checks do not establish the addressing method of every VM in the environment.
+
+Confirmed DHCP Dependencies
+
+The Windows 10 client and Kali's INTERNAL interface are confirmed DHCP clients on 10.10.10.0/24. Both DHCP pools remain configured, and the Kea DHCPv4 service was active during the baseline inspection.
+
+No failure has been injected, and no root cause has been established.
